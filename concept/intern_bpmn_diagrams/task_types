@@ -1,0 +1,19 @@
+__ tipos de tarefas --
+
+user task -> realizada por um humano com recurso à sistemas/atividade humana;
+
+service task -> realizada diretamente por um sistema de forma autom
+atica/chamada de um serviço/APIs;
+
+send task -> uzado para mandar mensagens. Muitas vezes, entre pools diferentes;
+
+
+receive task -> indica  recebimento de uma mensagem/informação;
+
+
+manual task -> tarefa executada por um humano, mas sem auxílio de uma maquiana ou sistema;
+
+business rule task -> usado para indicar a validação de regras de negócio normalmente modelados no DMN (Decision Model and Monation)
+
+
+script task -> usado para descreever a validação de um script -> tarefas a basicas, lógica simples
