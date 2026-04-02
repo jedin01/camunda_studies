@@ -1,0 +1,22 @@
+events -> descrevem um ocorrido/ alguma coisa q acontece 
+
+
+--tipos de eventos--
+
+eventos d início, intermediários e d fim.
+
+
+eventos de captura e eventos d lançamento (Catching events & throwing events)
+
+
+Catching events -> entram em cena quando alguma o coisa independente d um processo acontce e influencia o curso do porcesso;
+
+Throwing events -> triggered, causados por um processo, são lançados durnate ou no fim de processo;
+
+
+
+
+start events são catching events
+end events são throwing events
+
+intermediate events podem ser catching ou throwing events
