@@ -1,0 +1,83 @@
+Negócio -> interação entre um conjusto de pessoas com o objetico de executar actividades d entrega de valor para os clientes e gerar retorno às partes interessadas.
+
+Processo de negócio -> trabalho que entrega valor diretamente para os clientes ou paoia e/ou gerencia outros processos.
+
+
+---ponta-à-ponta -
+Interfuncional -
+Envolvendo todo o trabalho -
+Cruzando limites funcionais necessários p entregar valor aos clientes - 
+
+
+
+------------------------------->
+estruturas por processos
+
+---
+
+estrutura funcional para a estrutura de processos:
+
+vertical funcional
+funcional com provessos em segundo plano
+processual com funcional em segundo plano
+processos horizontais
+
+---
+
+hierarquia de processos de negócios
+
+
+
+--- tipos de processos de negócio
+
+
+-----
+
+BPM - Business Process Management
+
+BPMN - Business Process Management and Notation
+
+
+Mapear, Desenhar, Modelar e Redenhar
+
+
+elementos do BPMN:
+
+Atividades -> trabalho no tempo -> representações d trabalho a ser realizado para atingir este objetivo específico (retanguloszinhos)
+
+Gateways/portões -> alterando caminhos -> reprentam decições a serem tomadas/junção de processos (lozangulo)
+
+-- tipos d gateway --
+
+exclusivo: é aquele q contempla simplesmete um dos partidos/caminhos de um fluxo ou seguirá o caminho default (losangulo com "x")
+paralelo: é aquele que q contempla várias actividades ao mesmo templo (losangulo com "+"), segue para todos
+inclusivo: é aquele q pode tomar mais d um caminho  (losangulo com um circulo dentro)
+
+baseado em eventos: ---
+complexo: ---
+-------------
+
+Eventos -> coisas q acontecem -> descrevem ocorrências durante um processo. existem eventos d inicio, intermediários e d fim, são descritos por meio d círculos
+
+***ficam smpr no participio. são coisas que podem acontecer no inicio, meio ou fim de um processo
+
+--------------
+
+Data Objects -> dados d entrada e saída, ou seja, dados produzidos e consumidos
+descricao visual das informações q são utilizadas e produzidas ao longo do processo. n são automatizáveis.
+
+---------------
+
+Pool e Lanes -> quem faz o quê -> uma pool identifica o processo e as lanes identificam os papeis/entidades envolvidos no processo
+as pools envolvem lanes
+----------------
+
+Fluxos -> caminhos e interações
+
+-- tipos --
+
+fluxo d sequencia: representa a ordem sequencial do fluxo das atividades do processo d negócio
+fluxo d mensagens: representa o fluxo das mensagens entre um emissor e um receptor. mensgaem de um porcesso para outro processo, relaciona «m processos
+fluxo d associação: usado para associar dados, texto e outros artefatos aos objetos do fluxo, mostrando as entradas e as saídas das actividades sai d uma atividade para um dataobject
+
+BOAT - Business Orquestration and Automation Technologies
