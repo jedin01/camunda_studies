@@ -29,3 +29,5 @@ Collect -> retorna todos os outputs de hits que baterem.
 Output order -> retorna tds os acertos pou hits tendo em conta a ordem de outputs
 Rule order -> retorna tds os hits na ordem exata de linhas da tabela.
 
+PriorityPNãoNão suportadaOutput OrderONãoNão suportada
+
