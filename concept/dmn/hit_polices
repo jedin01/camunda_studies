@@ -1,0 +1,26 @@
+com a realidade da sobreposicao de regras (varias linhas podem ser verddadeirass), surge a necessidade de definir o comportamento padrao de como o motor de regras deve agir diuante disso
+
+
+há 11 polítoicas de acerto:
+
+U, A, P, F, C, O, R
+
+Unique, Any, Priority, First, Colllect, Output order, Rule order
+
+agrupados em single hit e multiple hit
+
+
+UAPF -> single hit
+COR -> multiple hit
+
+
+-- dive in --
+
+Single hit
+
+Unique -> define q nheuma regra deve ser sobreposta. Se duas regras baterem, o motor gera um erro. Ex.: definicao da idade tendo em conta a faiaxa etária
+Any -> permite sobreposições sobre a condição d q, quando haver, essas regras devem ter o mesmo output. Ex.: várias condições q levam à aprovação.
+Priority -> pode haver sobreposição mas, no caso de haver, retorna a regra com a maior prioridade de output. Você define a ordem de prioridade dos valores de saída (ex: “Crítico” > “Alto” > “Médio” > “Baixo”).
+First -> retorna a primeira regra (de cima para baixo) q bater
+
+Multiple hit
