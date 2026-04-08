@@ -1,0 +1,26 @@
+DRD elements:
+
+Decision tables and Litex - literal expressions
+Decisions based on input date
+Decisions based on other decisions
+Knowledge sources and authority requirements
+BKS -> Business Knowledge Models and Knowledge Requirements
+
+
+estrutura hierárquica de decisões
+
+
+
+resume:
+
+DRD
+
+A Decision Requirements Diagram, or DRD, is a graphical representation of the decision-making process and its relation to input data, knowledge sources, and other decisions.
+
+DMN
+
+DMN stands for Decision Model and Notation. It’s an OMG standard (like BPMN) for modeling and executing business decisions, typically using decision tables and expressions that both business and IT can understand.
+
+Business knowledge model (BKM)
+
+In DMN, a business knowledge model (BKM) is a reusable function containing a piece of decision logic that you can call from one or more decisions in your DRD (Decision Requirements Diagram).
