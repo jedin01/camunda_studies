@@ -18,3 +18,46 @@ Broker -> é o componente que processa eventos e instâncias de processos, armaz
 Gateway -> é aquele componente que recebe requisições dos clientes e as encaminha para os Brokers do Cluster.
 
 gRPC -> é um protocolo de comunicação eficiente e leve para sistemas distribuídos, utilizado pelo Zeebe para comunicação interna entre os componentes do Cluster.
+
+
+
+O que o Broker executa realmente?
+O Zeebe Broker é um motor de orquestração distribuído (workflow engine). Ele faz o seguinte:
+
+Executa a lógica de controle do processo (orquestração)
+Interpreta o modelo BPMN que você deployou (o fluxo: sequência de tarefas, gateways, eventos, sub-processos, etc.).
+Avança o token no processo (move de uma atividade para a próxima).
+Gerencia o estado completo da instância do processo: variáveis, tokens ativos, timers, mensagens, etc.
+Cria jobs quando chega em uma atividade que precisa de execução externa (Service Task, Send Task, etc.).
+
+Processa comandos
+Recebe comandos via Gateway (ex.: “crie uma instância de processo”, “complete este job”, “deploy este BPMN”, “cancele instância”, etc.).
+Aplica esses comandos no stream de eventos interno (usando stream processing).
+
+Gerencia jobs
+Quando o processo chega em uma Service Task, o broker cria um Job (com tipo, variáveis, deadline, etc.).
+Atribui (ativa) esse job para um Job Worker que esteja inscrito para aquele job type.
+Registra quando o job é completado ou falha, e continua o fluxo do processo.
+
+Mantém o estado e a replicação
+Armazena tudo no filesystem (não usa banco de dados externo).
+Replica o estado entre os brokers do cluster (usando Raft por partição).
+
+
+O que o Broker NÃO faz?
+
+Não executa lógica de negócio (código Java, Python, Node.js, etc. que você escreve).
+Não chama APIs externas, não envia e-mails, não atualiza bancos de dados, não faz cálculos complexos.
+Não roda o código dentro das Service Tasks.
+
+
+Elasticsearch é um motor de busca e análise distribuído (baseado em Apache Lucene), extremamente rápido para:
+
+Buscas full-text (texto completo)
+Buscas agregadas (filtros, estatísticas, contagens)
+Análises em tempo real
+Armazenamento de grandes volumes de dados (logs, eventos, documentos JSON)
+
+Operate e Tasklist leem esses dados do Elasticsearch para mostrar instâncias de processos, tarefas, incidentes, variáveis, etc.
+Optimize usa o Elasticsearch para fazer análises, dashboards, heatmaps, relatórios de gargalos, tempos médios, etc.
+
