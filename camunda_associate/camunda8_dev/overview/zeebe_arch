@@ -1,0 +1,20 @@
+O Zeebe é o motor de automação de processos do Camunda, é o responsável pela execução dos processos BPMN e decisões DMN. Gerencia instâncias de processos, eventos e taredas de forma distribuída.
+
+O Zeebe tem uma arquitetutra distribuída baseada em Clusters (Brokers e gateways). Processa tudo via streams de eventos. Suporta gPRC e HTTP APIs e, atualmente, gerencia user tasks diretamente q antes ficavam para o tasklist.
+
+
+-- PAR AFICAR NA MENTE --
+
+Tudo roda sobre o Zeebe. Os outros componentes (Operate, Tasklist e Optimize) consomem dados dele via exporters (que exportam dados para o Elasticsearch/OpenSearch).
+
+
+
+-- Detalhes --
+
+Cluster ->  conjunto de servidores/máquinas q trabalham juntos para executar processos de forma distribuída, escalável e tolerante a falhas.
+
+Broker -> é o componente que processa eventos e instâncias de processos, armazenando-os em streams de eventos. Cada Broker é um nó independente dentro do Cluster. Ou seja, é um servidor que processa eventos e instâncias de processos.
+
+Gateway -> é aquele componente que recebe requisições dos clientes e as encaminha para os Brokers do Cluster.
+
+gRPC -> é um protocolo de comunicação eficiente e leve para sistemas distribuídos, utilizado pelo Zeebe para comunicação interna entre os componentes do Cluster.
