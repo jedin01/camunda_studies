@@ -15,6 +15,9 @@ Cluster ->  conjunto de servidores/máquinas q trabalham juntos para executar pr
 
 Broker -> é o componente que processa eventos e instâncias de processos, armazenando-os em streams de eventos. Cada Broker é um nó independente dentro do Cluster. Ou seja, é um servidor que processa eventos e instâncias de processos.
 
+Partition -> é uma partição lógica dentro do Cluster, usada para distribuir o processamento e armazenamento de eventos e instâncias de processos. Cada Broker é responsável por uma ou mais partições q têm as suas responsabilidades.
+https://academy.camunda.com/content/wp/8hl21nyq8wmf/188jui3r6qbsk/scormcontent/assets/broker1.png
+
 Gateway -> é aquele componente que recebe requisições dos clientes e as encaminha para os Brokers do Cluster.
 
 gRPC -> é um protocolo de comunicação eficiente e leve para sistemas distribuídos, utilizado pelo Zeebe para comunicação interna entre os componentes do Cluster.
@@ -60,4 +63,5 @@ Armazenamento de grandes volumes de dados (logs, eventos, documentos JSON)
 
 Operate e Tasklist leem esses dados do Elasticsearch para mostrar instâncias de processos, tarefas, incidentes, variáveis, etc.
 Optimize usa o Elasticsearch para fazer análises, dashboards, heatmaps, relatórios de gargalos, tempos médios, etc.
+
 
